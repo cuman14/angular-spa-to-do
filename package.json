@@ -5,7 +5,9 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "play": "concurrently -c \"blue,green\"  \"npm start\"  \"npm run play:mock-api\"",
+    "play:mock-api": "json-server db.json -p 3500"
   },
   "private": true,
   "dependencies": {
