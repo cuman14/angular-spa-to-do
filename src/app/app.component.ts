@@ -1,11 +1,11 @@
+import { HeaderComponent } from '@angular-spa-to-do/ui';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
-  selector: 'angular-spa-to-do-root',
+  imports: [RouterModule, HeaderComponent],
+  selector: 'app-to-do-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

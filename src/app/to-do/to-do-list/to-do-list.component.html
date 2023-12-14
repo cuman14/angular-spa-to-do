@@ -1,0 +1,66 @@
+<section class="tasks">
+  <fieldset *ngIf="tasksPending$ | async as tasksPending">
+    <legend class="task-legend">Task Pending</legend>
+    <ng-container
+      [ngTemplateOutlet]="taskTemplate"
+      [ngTemplateOutletContext]="{ taskList: tasksPending }"
+    >
+    </ng-container>
+  </fieldset>
+  <fieldset *ngIf="tasksCompleted$ | async as tasksCompleted">
+    <legend class="task-legend">Task Complete</legend>
+    <ng-container
+      [ngTemplateOutlet]="taskTemplate"
+      [ngTemplateOutletContext]="{ taskList: tasksCompleted }"
+    >
+    </ng-container>
+  </fieldset>
+</section>
+
+<ng-template #taskTemplate let-taskList="taskList">
+  <ul>
+    @for (task of taskList; track task.id) {
+    <li class="tasks-elements-actions">
+      <label class="tasks-elements" for="{{ task.id }}">
+        @if (task.status === taskStatus.PENDING) {
+        <input
+          type="checkbox"
+          name="{{ task.id }}"
+          id="{{ task.id }}"
+          (change)="onCheckChange(task)"
+        />
+        } @else {
+        <mat-icon
+          aria-hidden="false"
+          aria-label="task done"
+          fontIcon="task_alt"
+        ></mat-icon>
+        }
+
+        <h4 class="tasks-elements-title" [attr.data-state]="task.status">
+          {{ task.title }}
+        </h4>
+        <span class="tasks-elements-status" [attr.data-state]="task.status">{{
+          task.status
+        }}</span>
+
+        <span class="tasks-elements-date">{{ task.date | date }}</span>
+      </label>
+      <div class="tasks-actions">
+        <button
+          (click)="deleteTask(task.id)"
+          class="tasks-actions"
+          id="btn-{{ task.id }}"
+        >
+          <mat-icon
+            aria-hidden="false"
+            aria-label="delete task"
+            fontIcon="delete"
+          ></mat-icon>
+        </button>
+      </div>
+    </li>
+
+    }
+  </ul>
+</ng-template>

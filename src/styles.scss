@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  height: 100%;
+  color: #1b1d20;
+}
+
+@import './assets/fonts/Khand_Complete/Fonts/WEB/css/khand.css';
+@import './assets/fonts/Inter/inter.css';
+
+body {
+  margin: 0 auto;
+}
+h1,
+h2 {
+  font-family: 'Inter Bold', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+fieldset {
+  border: none;
+}

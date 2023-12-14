@@ -1,27 +1,15 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "title": "Task 1",
-      "status": "incomplete",
-      "date": "2023-11-15"
-    },
-    {
       "id": 2,
       "title": "Task 2",
       "status": "complete",
       "date": "2023-11-16"
     },
     {
-      "id": 3,
-      "title": "Task 3",
-      "status": "pending",
-      "date": "2023-11-17"
-    },
-    {
       "id": 4,
       "title": "Task 4",
-      "status": "incomplete",
+      "status": "complete",
       "date": "2023-11-18"
     },
     {
@@ -33,13 +21,13 @@
     {
       "id": 6,
       "title": "Task 6",
-      "status": "pending",
+      "status": "complete",
       "date": "2023-11-20"
     },
     {
       "id": 7,
       "title": "Task 7",
-      "status": "incomplete",
+      "status": "complete",
       "date": "2023-11-21"
     },
     {
@@ -51,13 +39,13 @@
     {
       "id": 9,
       "title": "Task 9",
-      "status": "pending",
+      "status": "complete",
       "date": "2023-11-23"
     },
     {
       "id": 10,
       "title": "Task 10",
-      "status": "incomplete",
+      "status": "complete",
       "date": "2023-11-24"
     },
     {
@@ -75,7 +63,7 @@
     {
       "id": 13,
       "title": "Task 13",
-      "status": "incomplete",
+      "status": "complete",
       "date": "2023-11-27"
     },
     {
@@ -87,13 +75,13 @@
     {
       "id": 15,
       "title": "Task 15",
-      "status": "pending",
+      "status": "complete",
       "date": "2023-11-29"
     },
     {
       "id": 16,
       "title": "Task 16",
-      "status": "incomplete",
+      "status": "complete",
       "date": "2023-11-30"
     },
     {
@@ -105,13 +93,13 @@
     {
       "id": 18,
       "title": "Task 18",
-      "status": "pending",
+      "status": "complete",
       "date": "2023-12-02"
     },
     {
       "id": 19,
       "title": "Task 19",
-      "status": "incomplete",
+      "status": "pending",
       "date": "2023-12-03"
     },
     {
@@ -129,7 +117,7 @@
     {
       "id": 22,
       "title": "Task 22",
-      "status": "incomplete",
+      "status": "pending",
       "date": "2023-12-06"
     },
     {
@@ -147,7 +135,7 @@
     {
       "id": 25,
       "title": "Task 25",
-      "status": "incomplete",
+      "status": "pending",
       "date": "2023-12-09"
     },
     {
@@ -165,7 +153,7 @@
     {
       "id": 28,
       "title": "Task 28",
-      "status": "incomplete",
+      "status": "pending",
       "date": "2023-12-12"
     },
     {

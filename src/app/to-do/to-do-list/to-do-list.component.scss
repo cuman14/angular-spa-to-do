@@ -1,0 +1,83 @@
+$status-complete-bg: #ddf5fc;
+$status-complete-text: #44c6f0;
+
+$status-pending-bg: #fcebdb;
+$status-pending-text: #f8cba2;
+
+$status-incomplete-bg: #fbdede;
+$status-incomplete-text: #f5a7a7;
+
+.tasks {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.task-legend {
+  font-size: 2rem;
+}
+.tasks-elements {
+  display: flex;
+  align-items: center;
+  flex-grow: 2;
+  gap: 3rem;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  &-title {
+    flex-grow: 2;
+  }
+  &-date {
+    width: 35%;
+  }
+  &-status {
+    font-weight: 500;
+    border-radius: 2rem;
+    border: 1px solid;
+    padding: 0.5rem 1rem;
+    text-transform: capitalize;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 9rem;
+  }
+  &-status::before {
+    content: '·';
+    font-size: 5rem;
+    line-height: 0;
+    height: 8px;
+    display: block;
+  }
+}
+.tasks-actions {
+  display: flex;
+  gap: 1rem;
+  button {
+    border: none;
+    background: transparent;
+  }
+}
+.tasks-elements-actions {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  align-items: center;
+  border-bottom: 1px solid;
+  border-color: #c0c0c0;
+  mat-icon {
+    cursor: pointer;
+  }
+}
+.tasks-elements-status[data-state='complete'] {
+  color: $status-complete-text;
+  background-color: $status-complete-bg;
+}
+
+.tasks-elements-status[data-state='pending'] {
+  color: $status-pending-text;
+  background-color: $status-pending-bg;
+}
+
+.tasks-elements-status[data-state='incomplete'] {
+  color: $status-incomplete-text;
+  background-color: $status-incomplete-bg;
+}
